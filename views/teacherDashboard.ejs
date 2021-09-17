@@ -28,10 +28,13 @@
                           <% } else { %>
                             <%= file.filename %>
                               <% } %>
+                              <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
+                                <button class="btn form-control btn-danger btn-block mt-4">Delete</button>
+                              </form>
                       </div>
                       <% }) %>
                         <% } else { %>
-                          <h3 class="text-center">No files to show</h3>
+                          <h4 class="text-center">No files to Show</h4>
                           <% } %>
             </div>
         </div>
